@@ -151,4 +151,8 @@ for k in vehicles:
     r = routes[k]
     load, dist = route_stats(r, demands, distances)
     print(f"Vehicle {k}: route={r} load={load} dist={dist}")
+    if load > capacity + 1e-6:
+            print(f"Capacity violation: Vehicle {k} load={load} > capacity={capacity}")
+    else : 
+        print(f"All vehicle loads are within capacity")
 
