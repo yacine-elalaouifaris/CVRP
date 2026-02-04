@@ -147,12 +147,15 @@ def route_stats(route, demands, distances):
 
 sol = model.getAttr('x', x)  # tuple-indexed solution
 routes = extract_routes(sol, N, vehicles)
+under_capacity = True
 for k in vehicles:
     r = routes[k]
     load, dist = route_stats(r, demands, distances)
     print(f"Vehicle {k}: route={r} load={load} dist={dist}")
     if load > capacity + 1e-6:
+            under_capacity = False
             print(f"Capacity violation: Vehicle {k} load={load} > capacity={capacity}")
-    else : 
-        print(f"All vehicle loads are within capacity")
+
+if under_capacity:
+    print("All vehicles within capacity.")      
 
