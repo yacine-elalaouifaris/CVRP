@@ -189,12 +189,12 @@ Each formulation presents trade-offs between model size, relaxation strength, an
 
 - **Python 3.8+**
 - **Gurobi Optimizer** (version 9.0 or higher)
-  - Requires a valid Gurobi license (free academic licenses available at [gurobi.com](https://www.gurobi.com/academia/academic-program-and-licenses/))
+  - Requires a valid Gurobi license 
 - **gurobipy** Python package
 
 ### 4.2 Installation
 
-1. Install Gurobi and obtain a license following the instructions at [https://www.gurobi.com/downloads/](https://www.gurobi.com/downloads/)
+1. Install Gurobi
 
 2. Install the required Python package:
 ```bash
